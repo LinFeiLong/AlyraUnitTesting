@@ -7,7 +7,14 @@ module.exports = {
     },
   },
 
-  mocha: {},
+  mocha: {
+    reporter: "eth-gas-reporter",
+    reporterOptions: {
+      currency: "ETH",
+      gasPrice: 1,
+      showTimeSpent: true,
+    },
+  },
 
   compilers: {
     solc: {
